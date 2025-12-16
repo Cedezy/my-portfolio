@@ -82,7 +82,6 @@ import project3 from '../assets/project3.png';
             return () => clearTimeout(timer);
         }, []);
 
-
         return (
             <div className="min-h-screen dark:bg-gray-900 transition-colors">
                 <div className="mx-auto">
@@ -153,41 +152,79 @@ import project3 from '../assets/project3.png';
                                         </div>
 
                                         <div className="border-t pt-6 border-gray-300 dark:border-gray-700">
-                                            <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-4">EDUCATION</h3>
+                                            <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-4">
+                                                EDUCATION
+                                            </h3>
+
                                             <div className="flex flex-col gap-6">
+                                                {/* JHS */}
                                                 <div>
                                                     <div className="flex justify-between items-start mb-1 gap-4">
-                                                        <h4 className="font-semibold text-gray-800 dark:text-gray-100">
-                                                            Zamboanga del Sur National High School
+                                                        <h4 className="font-semibold">
+                                                            <a
+                                                                href="https://www.facebook.com/OfficialZSNHS.SHS/"
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="text-gray-800 dark:text-gray-100 hover:text-blue-600 hover:underline ease-in-out duration-300"
+                                                            >
+                                                                Zamboanga del Sur National High School
+                                                            </a>
                                                         </h4>
                                                         <span className="text-xs text-blue-600 font-medium">JHS</span>
                                                     </div>
-                                                    <p className="text-sm text-gray-600 dark:text-gray-300">Sta. Maria Pagadian City, Philippines</p>
+                                                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                                                        Sta. Maria Pagadian City, Philippines
+                                                    </p>
                                                 </div>
 
+                                                {/* SHS */}
                                                 <div>
                                                     <div className="flex justify-between items-start mb-1 gap-4">
-                                                        <h4 className="font-semibold text-gray-800 dark:text-gray-100">
-                                                            Zamboanga del Sur National High School – Senior High
+                                                        <h4 className="font-semibold">
+                                                            <a
+                                                                href="https://www.facebook.com/OfficialZSNHS.SHS/"
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="text-gray-800 dark:text-gray-100 hover:text-blue-600 hover:underline ease-in-out duration-300"
+                                                            >
+                                                                Zamboanga del Sur National High School – Senior High
+                                                            </a>
                                                         </h4>
                                                         <span className="text-xs text-blue-600 font-medium">SHS</span>
                                                     </div>
-                                                    <p className="text-sm text-gray-600 dark:text-gray-300">ICT Strand (Information and Communications Technology)</p>
-                                                    <p className="text-xs text-gray-600 dark:text-gray-400">Sta. Maria Pagadian City, Philippines</p>
+                                                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                                                        ICT Strand (Information and Communications Technology)
+                                                    </p>
+                                                    <p className="text-xs text-gray-600 dark:text-gray-400">
+                                                        Sta. Maria Pagadian City, Philippines
+                                                    </p>
                                                 </div>
 
+                                                {/* College */}
                                                 <div>
                                                     <div className="flex justify-between items-start mb-1 gap-4">
-                                                        <h4 className="font-semibold text-gray-800 dark:text-gray-100">
-                                                            Southern Mindanao Colleges
+                                                        <h4 className="font-semibold">
+                                                            <a
+                                                                href="https://www.smcpag.com/"
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="text-gray-800 dark:text-gray-100 hover:text-blue-600 hover:underline ease-in-out duration-300"
+                                                            >
+                                                                Southern Mindanao Colleges
+                                                            </a>
                                                         </h4>
                                                         <span className="text-xs text-blue-600 font-medium">Present</span>
                                                     </div>
-                                                    <p className="text-sm text-gray-600 dark:text-gray-300">Bachelor of Science in Information Technology (BSIT)</p>
-                                                    <p className="text-xs text-gray-600 dark:text-gray-400">San Francisco, Pagadian City, Philippines</p>
+                                                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                                                        Bachelor of Science in Information Technology (BSIT)
+                                                    </p>
+                                                    <p className="text-xs text-gray-600 dark:text-gray-400">
+                                                        San Francisco, Pagadian City, Philippines
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
+
 
                                         <div className="border-t pt-6 border-gray-300 dark:border-gray-700">
                                             <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-4">
