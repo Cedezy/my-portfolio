@@ -172,7 +172,7 @@ import project3 from '../assets/project3.png';
                                                         </h4>
                                                         <span className="text-xs text-blue-600 font-medium">JHS</span>
                                                     </div>
-                                                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                                                    <p className="text-xs text-gray-600 dark:text-gray-300">
                                                         Sta. Maria Pagadian City, Philippines
                                                     </p>
                                                 </div>
