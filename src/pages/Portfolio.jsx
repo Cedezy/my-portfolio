@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { MapPin, MessageSquare, Download, Flag, Briefcase , User, Info  } from 'lucide-react'
+import { MapPin, MessageSquare, Download, Flag, Briefcase , User, Info, GraduationCap, Code } from 'lucide-react'
 import { Github, Instagram, Linkedin, Facebook } from 'lucide-react'; 
 import { Sun, Moon } from 'lucide-react'
 import profile from '../assets/profile.jpg'
@@ -74,6 +74,33 @@ import project3 from '../assets/project3.png';
             }
 
         ]
+
+        const timelineData = [
+            {
+                id: 1,
+                title: 'Hello World Program',
+                year: '2020',
+                icon: Code,
+                color: 'from-blue-500 to-cyan-500',
+                description: 'The beginning of my coding journey'
+            },
+            {
+                id: 2,
+                title: 'TVL – ICT Strand',
+                year: '2022',
+                icon: Briefcase,
+                color: 'from-purple-500 to-pink-500',
+                description: 'Technical-Vocational-Livelihood education'
+            },
+            {
+                id: 3,
+                title: 'Bachelor of Science in Information Technology (BSIT)',
+                year: 'Present',
+                icon: GraduationCap,
+                color: 'from-emerald-500 to-teal-500',
+                description: 'Pursuing higher education in IT'
+            }
+        ];
 
         useEffect(() => {
             const timer = setTimeout(() => {
@@ -359,16 +386,75 @@ import project3 from '../assets/project3.png';
                                         </div>
                                     )}
                                     {activeTab === 'timeline' && (
-                                        <div className="text-center py-10 flex flex-col items-center gap-4">
-                                            <Briefcase className="w-12 h-12 text-gray-400 dark:text-gray-500" />
-                                            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">
-                                                Work Experience
-                                            </h3>
-                                            <p className="text-sm text-gray-600 dark:text-gray-400 max-w-xs">
-                                                No work experience yet — currently learning and building projects!
-                                            </p>
-                                        </div>
-                                    )}
+  <div className="space-y-6 mb-12 px-2 sm:px-0">
+    {/* Header */}
+    <div className="text-center">
+      <h3 className="text-sm sm:text-md md:text-xl tracking-tighter font-medium bg-linear-to-r from-gray-800 to-gray-600 dark:from-gray-100 dark:to-gray-300 bg-clip-text text-transparent mb-2">
+        MY JOURNEY
+      </h3>
+      <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+        A timeline of milestones and achievements
+      </p>
+    </div>
+
+    {/* Timeline */}
+    <div className="relative">
+      {/* Vertical line */}
+      <div className="absolute left-5 sm:left-8 top-0 bottom-0 w-0.5 bg-linear-to-b from-blue-500 via-purple-500 to-emerald-500"></div>
+
+      <div className="space-y-6">
+        {timelineData.map((item, index) => {
+          const Icon = item.icon;
+          return (
+            <div
+              key={item.id}
+              className="relative pl-14 sm:pl-20 group"
+              style={{
+                animation: `fadeInUp 0.6s ease-out ${index * 0.2}s both`,
+              }}
+            >
+              {/* Icon */}
+              <div
+                className={`absolute left-0 flex items-center justify-center 
+                w-10 h-10 sm:w-16 sm:h-16 
+                rounded-full bg-linear-to-br ${item.color} 
+                shadow-lg transform group-hover:scale-110 transition-transform duration-300`}
+              >
+                <Icon className="w-5 h-5 sm:w-8 sm:h-8 text-white" />
+              </div>
+
+              {/* Card */}
+              <div className="bg-white dark:bg-gray-800 rounded-md p-4 sm:p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 dark:border-gray-700">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-2">
+                  <h4 className="text-sm sm:text-lg font-bold text-gray-800 dark:text-gray-100">
+                    {item.title}
+                  </h4>
+
+                  <span
+                    className={`inline-flex items-center px-2 sm:px-3 py-1 
+                    rounded-full text-[10px] sm:text-xs font-semibold 
+                    bg-linear-to-r ${item.color} text-white w-fit`}
+                  >
+                    {item.year}
+                  </span>
+                </div>
+
+                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+                  {item.description}
+                </p>
+              </div>
+
+              {/* Dot */}
+              <div className="absolute left-[18px] sm:left-7 top-4 sm:top-6 w-2 h-2 bg-white dark:bg-gray-800 rounded-full border-2 border-gray-400 dark:border-gray-500"></div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+)}
+
+
                                 </div>
                             </div>
                         </div>
