@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { MapPin, MessageSquare, Download, Flag, Briefcase , User, Info, GraduationCap, Code } from 'lucide-react'
 import { Github, Instagram, Linkedin, Facebook } from 'lucide-react'; 
+import { FaFacebookSquare, FaGithub  } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
 import { Sun, Moon } from 'lucide-react'
 import profile from '../assets/profile.jpg'
 import ContactModal from '../components/ContactModal';
@@ -116,12 +118,12 @@ import project3 from '../assets/project3.png';
                         <span className="font-extrabold  text-gray-600 italic dark:text-gray-100 text-2xl">Zydece.</span>
                         <div className="flex items-center gap-4">
                             <div className='hidden md:block'>
-                                <div className='flex justify-center items-center gap-4'>
-                                    <button onClick={() => setShowModal(true)} className=" text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 px-4 py-2 rounded-lg text-sm cursor-pointer flex justify-center items-center gap-2">
+                                <div className='flex justify-center items-center gap-2'>
+                                    <button onClick={() => setShowModal(true)} className=" text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 px-4 py-2 rounded-lg text-xs cursor-pointer flex justify-center items-center gap-2">
                                         <MessageSquare className="w-4 h-4" />
                                         Send Message
                                     </button>
-                                    <button onClick={() => setShowResumeModal(true)} className="text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 px-4 py-2 rounded-lg text-sm cursor-pointer">
+                                    <button onClick={() => setShowResumeModal(true)} className="text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 px-4 py-2 rounded-lg text-xs cursor-pointer">
                                         Resume
                                     </button>
                                 </div>
@@ -135,7 +137,7 @@ import project3 from '../assets/project3.png';
                             </div>
                         </div>
                     </div>
-                    <div className="bg-white dark:bg-gray-800 rounded-b-2xl overflow-hidden transition-colors">
+                    <div className="bg-white dark:bg-gray-800 ">
                         <div className="grid grid-cols-1 lg:grid-cols-3">
                             <div className='shadow-sm'>
                                 {loading ? <SkeletonProfile /> : (
@@ -149,23 +151,23 @@ import project3 from '../assets/project3.png';
                                             />
                                             <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">Acalal, Abcede S.</h2>
                                             <div className="flex items-center gap-1 text-gray-600 dark:text-gray-300 text-sm mt-1">
-                                                <MapPin className="w-4 h-4" />
-                                                <span>Pagadian City, Zamboanga del Sur, Philippines</span>
+                                                <MapPin className="w-3 h-3" />
+                                                <span className='text-xs text-gray-600 dark:text-gray-300'>Pagadian City, Zamboanga del Sur, Philippines</span>
                                             </div>
-                                            <p className="text-blue-600 text-sm mt-1">Aspiring Web Developer</p>
+                                            <p className="text-blue-600 text-xs mt-1">Aspiring Web Developer</p>
 
                                             <div className="flex gap-2 mt-6 w-full">
                                                 <button 
                                                     onClick={() => setShowModal(true)} 
-                                                    className="whitespace-nowrap flex-1 bg-gray-800 dark:bg-gray-700 text-white px-4 py-2 rounded-md text-sm flex items-center justify-center gap-2 hover:bg-gray-700 dark:hover:bg-gray-600 ease-in-out duration-300 cursor-pointer">
-                                                    <MessageSquare className="w-4 h-4" />
+                                                    className="whitespace-nowrap flex-1 bg-gray-800 dark:bg-gray-700 text-white px-4 py-2 rounded-md text-xs flex items-center justify-center gap-2 hover:bg-gray-700 dark:hover:bg-gray-600 ease-in-out duration-300 cursor-pointer">
+                                                    <MessageSquare className="w-3 h-3" />
                                                     Send Message
                                                 </button>
 
                                                 <button onClick={() => setShowResumeModal(true)}
-                                                    className="flex-1 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded-md text-sm flex items-center justify-center gap-2 hover:bg-gray-300 dark:hover:bg-gray-600 ease-in-out duration-300 cursor-pointer"
+                                                    className="flex-1 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded-md text-xs flex items-center justify-center gap-2 hover:bg-gray-300 dark:hover:bg-gray-600 ease-in-out duration-300 cursor-pointer"
                                                     >
-                                                    <Download className="w-4 h-4" />
+                                                    <Download className="w-3 h-3" />
                                                     Resume
                                                 </button>
 
@@ -183,71 +185,69 @@ import project3 from '../assets/project3.png';
                                                 EDUCATION
                                             </h3>
 
-                                            <div className="flex flex-col gap-6">
-                                                {/* JHS */}
-                                                <div>
-                                                    <div className="flex justify-between items-start mb-1 gap-4">
+                                            <div className="flex flex-col gap-4">
+                                                <div className="flex justify-between items-start mb-1 gap-4">
+                                                    <div className="leading-4">
                                                         <h4 className="font-semibold">
                                                             <a
                                                                 href="https://www.facebook.com/OfficialZSNHS.SHS/"
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
-                                                                className="text-gray-800 dark:text-gray-100 hover:text-blue-600 hover:underline ease-in-out duration-300"
+                                                                className="text-gray-800 dark:text-gray-100 hover:text-blue-600 hover:underline ease-in-out duration-300 text-xs"
                                                             >
                                                                 Zamboanga del Sur National High School
                                                             </a>
                                                         </h4>
-                                                        <span className="text-xs text-blue-600 font-medium">JHS</span>
+                                                         <p className="text-xs text-gray-600 dark:text-gray-300">
+                                                            Sta. Maria Pagadian City, Philippines
+                                                        </p>
+                                                        
                                                     </div>
-                                                    <p className="text-xs text-gray-600 dark:text-gray-300">
-                                                        Sta. Maria Pagadian City, Philippines
-                                                    </p>
+                                                    <span className="text-xs text-blue-600 font-medium">JHS</span>
                                                 </div>
-
-                                                {/* SHS */}
-                                                <div>
-                                                    <div className="flex justify-between items-start mb-1 gap-4">
+                                                <div className="flex justify-between items-start mb-1 gap-4">
+                                                    <div className="leading-4">
                                                         <h4 className="font-semibold">
                                                             <a
                                                                 href="https://www.facebook.com/OfficialZSNHS.SHS/"
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
-                                                                className="text-gray-800 dark:text-gray-100 hover:text-blue-600 hover:underline ease-in-out duration-300"
+                                                                className="text-gray-800 dark:text-gray-100 hover:text-blue-600 hover:underline ease-in-out duration-300 text-xs"
                                                             >
                                                                 Zamboanga del Sur National High School – Senior High
                                                             </a>
                                                         </h4>
-                                                        <span className="text-xs text-blue-600 font-medium">SHS</span>
+                                                        <p className="text-xs text-gray-600 dark:text-gray-300">
+                                                            ICT Strand (Information and Communications Technology)
+                                                        </p>
+                                                         <p className="text-xs text-gray-600 dark:text-gray-300">
+                                                            Sta. Maria Pagadian City, Philippines
+                                                        </p>
+                                                        
                                                     </div>
-                                                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                                                        ICT Strand (Information and Communications Technology)
-                                                    </p>
-                                                    <p className="text-xs text-gray-600 dark:text-gray-400">
-                                                        Sta. Maria Pagadian City, Philippines
-                                                    </p>
+                                                    <span className="text-xs text-blue-600 font-medium">SHS</span>
                                                 </div>
-
-                                                {/* College */}
-                                                <div>
-                                                    <div className="flex justify-between items-start mb-1 gap-4">
+                                                <div className="flex justify-between items-start mb-1 gap-4">
+                                                    <div className="leading-4">
                                                         <h4 className="font-semibold">
                                                             <a
-                                                                href="https://www.smcpag.com/"
+                                                                href="https://www.facebook.com/OfficialZSNHS.SHS/"
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
-                                                                className="text-gray-800 dark:text-gray-100 hover:text-blue-600 hover:underline ease-in-out duration-300"
+                                                                className="text-gray-800 dark:text-gray-100 hover:text-blue-600 hover:underline ease-in-out duration-300 text-xs"
                                                             >
                                                                 Southern Mindanao Colleges
                                                             </a>
                                                         </h4>
-                                                        <span className="text-xs text-blue-600 font-medium">Present</span>
+                                                        <p className="text-xs text-gray-600 dark:text-gray-300">
+                                                            Bachelor of Science in Information Technology (BSIT)
+                                                        </p>
+                                                         <p className="text-xs text-gray-600 dark:text-gray-300">
+                                                            San Francisco, Pagadian City, Philippines
+                                                        </p>
+                                                        
                                                     </div>
-                                                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                                                        Bachelor of Science in Information Technology (BSIT)
-                                                    </p>
-                                                    <p className="text-xs text-gray-600 dark:text-gray-400">
-                                                        San Francisco, Pagadian City, Philippines
-                                                    </p>
+                                                    <span className="text-xs text-blue-600 font-medium">Present</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -271,61 +271,71 @@ import project3 from '../assets/project3.png';
                             
                             <div className="col-span-2 space-y-6 md:p-6">
                                 {loading ? <SkeletonAbout /> : (
-                                    <div className='p-4 md:p-6 shadow-sm md:rounded-lg'>
+                                    <div className='p-4 md:p-6 shadow-sm md:rounded-2xl'>
                                         <div className='flex gap-2 items-center'>
-                                            <Info className='w-5 h-5 dark:text-gray-200'/>
-                                            <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100">About Me</h2>
+                                            <Info className='w-3 h-3 dark:text-gray-200'/>
+                                            <h2 className="text-xs font-semibold text-gray-800 dark:text-gray-100 uppercase">About Me</h2>
                                         </div>
-                                        
-                                        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300 text-justify md:text-left">
-                                            Hi! I'm Abcede, an aspiring Web Developer from Pagadian City, Philippines. I love creating responsive and user-friendly web applications.  
-                                            Passionate about learning new technologies and constantly improving my skills in front-end and back-end development.
-                                        </p>
+                                        <div className="">
+                                            <p className="mt-2 text-xs text-gray-600 dark:text-gray-300 text-justify">
+                                                Hi! I'm Abcede, an aspiring Web Developer from Pagadian City. I enjoy building responsive and user-friendly web applications that are simple, clean, and easy to use. I am passionate about learning new technologies and improving my skills in both front-end and back-end development.
+                                            </p>
+                                            <p className="mt-2 text-xs text-gray-600 dark:text-gray-300 text-justify">
+                                                I am currently a BSIT student and continuously improving my skills in web development. I have experience using HTML, CSS, JavaScript, React, Tailwind CSS, PHP, MongoDB, and the MERN stack. I enjoy creating projects that help people and solve real-world problems.
+                                            </p>
+                                            <p className="mt-2 text-xs text-gray-600 dark:text-gray-300 text-justify">
+                                                I also like exploring UI design and making websites look modern and organized. My goal is to become a skilled full-stack web developer and continue learning new technologies while building meaningful and creative projects.
+                                            </p>
+                                        </div>
                                         <div className="mt-4 flex gap-3">
                                             <a
                                                 href="https://www.facebook.com/abcede.sulani.acalal"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-gray-600 dark:text-gray-200 hover:text-gray-800 dark:hover:text-white border border-gray-300 dark:border-gray-600 p-1 rounded-md bg-gray-50 dark:bg-gray-700 transition"
-                                            >
-                                                <Facebook className="w-4 h-4" />
+                                                className="w-8 h-8 flex items-center justify-center rounded-lg border border-gray-200 bg-white text-black hover:shadow-md transition-all duration-300"
+    >
+                                                <FaFacebookSquare className="w-4 h-4" />
                                             </a>
                                             <a
                                                 href="https://www.linkedin.com/in/abcede-sulani-acalal-2b335a332/"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-gray-600 dark:text-gray-200 hover:text-gray-800 dark:hover:text-white border border-gray-300 dark:border-gray-600 p-1 rounded-md bg-gray-50 dark:bg-gray-700 transition"
-                                            >
-                                                <Linkedin className="w-4 h-4" />
+                                                className="w-8 h-8 flex items-center justify-center rounded-ee-lg border border-gray-200 bg-white text-black hover:shadow-md transition-all duration-300"
+    >
+                                                <FaLinkedin className="w-4 h-4" />
                                             </a>
                                             <a
                                                 href="https://github.com/Cedezy"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-gray-600 dark:text-gray-200 hover:text-gray-800 dark:hover:text-white border border-gray-300 dark:border-gray-600 p-1 rounded-md bg-gray-50 dark:bg-gray-700 transition"
-                                            >
-                                                <Github className="w-4 h-4" />
+                                                className="w-8 h-8 flex items-center justify-center rounded-lg border border-gray-200 bg-white text-black hover:shadow-md transition-all duration-300"
+    >
+                                                <FaGithub className="w-4 h-4" />
                                             </a>
                                             <a
                                                 href="https://www.instagram.com/abcedesulani/"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-gray-600 dark:text-gray-200 hover:text-gray-800 dark:hover:text-white border border-gray-300 dark:border-gray-600 p-1 rounded-md bg-gray-50 dark:bg-gray-700 transition"
-                                            >
+                                                className="w-8 h-8 flex items-center justify-center rounded-lg border border-gray-200 bg-white text-black hover:shadow-md transition-all duration-300"
+    >
                                                 <Instagram className="w-4 h-4" />
                                             </a>
                                         </div>
                                     </div>
                                 )}
-                                <div className='shadow-sm md:rounded-lg p-4 flex flex-col gap-4'>
-                                    <div className="flex gap-6 border-b border-gray-300 dark:border-gray-700">
+                                <div className='shadow-sm md:rounded-2xl p-6 flex flex-col gap-4'>
+                                    <div className="flex gap-6 dark:border-gray-700">
                                         <button onClick={() => setActiveTab('projects')}
-                                            className={`pb-3 px-2 text-sm font-medium cursor-pointer ${activeTab === 'projects' ? 'text-gray-800 dark:text-gray-100 border-b-2 border-gray-800 dark:border-gray-100' : 'text-gray-500 dark:text-gray-400'}`}>
-                                            Projects
+                                            className={`pb-3 px-2 text-xs font-medium cursor-pointer ${activeTab === 'projects' ? 'text-gray-800 dark:text-gray-100 border-b-2 border-gray-800 dark:border-gray-100' : 'text-gray-500 dark:text-gray-400'}`}>
+                                            PROJECTS
                                         </button>
                                         <button onClick={() => setActiveTab('timeline')}
-                                            className={`pb-3 px-2 text-sm font-medium cursor-pointer ${activeTab === 'timeline' ? 'text-gray-800 dark:text-gray-100 border-b-2 border-gray-800 dark:border-gray-100' : 'text-gray-500 dark:text-gray-400'}`}>
-                                            Experience
+                                            className={`pb-3 px-2 text-xs font-medium cursor-pointer ${activeTab === 'timeline' ? 'text-gray-800 dark:text-gray-100 border-b-2 border-gray-800 dark:border-gray-100' : 'text-gray-500 dark:text-gray-400'}`}>
+                                            EXPERIENCE
+                                        </button>
+                                         <button onClick={() => setActiveTab('certifications')}
+                                            className={`pb-3 px-2 text-xs font-medium cursor-pointer ${activeTab === 'timeline' ? 'text-gray-800 dark:text-gray-100 border-b-2 border-gray-800 dark:border-gray-100' : 'text-gray-500 dark:text-gray-400'}`}>
+                                            CERTIFICATIONS
                                         </button>
                                     </div>
                                     
@@ -336,47 +346,36 @@ import project3 from '../assets/project3.png';
                                                 : projects.map((project, i) => (
                                                     <div 
                                                         key={i}
-                                                        className="group rounded-lg overflow-hidden border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 hover:shadow-xl transition-all duration-300 
-                                                                flex flex-col sm:flex-row"
+                                                        className="group rounded-lg overflow-hidden border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row"
                                                     >
-                                                    
-                                                        <div className="relative w-full sm:w-64 h-48 sm:h-auto overflow-hidden bg-gray-200 dark:bg-gray-700">
-                                                            <img 
-                                                                src={project.image} 
-                                                                alt={project.title}
-                                                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                                                            />
-                                                        </div>
-                                                        
-                                                
                                                         <div className="p-4 flex flex-col justify-center flex-1">
                                                             <div className="flex flex-col sm:flex-row justify-between sm:items-center">
-                                                                <h4 className="font-bold text-lg mb-2 text-gray-800 dark:text-gray-100">
+                                                                <h4 className="font-bold text-sm mb-1 text-gray-800 dark:text-gray-100">
                                                                     {project.title}
                                                                 </h4>
                                                                 
                                                             </div>
 
-                                                            <p className="text-sm text-gray-600 dark:text-gray-300">
+                                                            <p className="text-xs text-gray-600 dark:text-gray-300">
                                                                 {project.description}
                                                             </p>
                                                             <div className='mt-2 flex flex-col md:flex-row justify-between gap-4'>
-                                                                <div className="flex flex-wrap gap-2">
+                                                                <div className="flex justify-center items-center flex-wrap gap-2">
                                                                     {project.tags.map((tag, idx) => (
                                                                         <span 
                                                                             key={idx}
-                                                                            className="px-3 py-1 text-xs rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200"
+                                                                            className="px-4 py-1 text-[10px] rounded-full bg-gray-100 dark:bg-blue-900 text-gray-700 dark:text-blue-200"
                                                                         >
                                                                             {tag}
                                                                         </span>
                                                                     ))}
                                                                 </div>
                                                                 <div className="flex gap-2 items-center">       
-                                                                    <a className="text-sm flex items-center gap-1 bg-gray-700 text-gray-50 px-2 py-1 rounded-sm" href="">
-                                                                        <Github className="w-4 h-4" />
+                                                                    <a className="text-xs flex items-center gap-1 bg-gray-700 text-gray-100 px-2 py-1 rounded-sm" href="">
+                                                                        <Github className="w-3 h-3" />
                                                                         Github
                                                                     </a> 
-                                                                    <a className="text-sm hover:opacity-70" href={project.web}>Demo</a>
+                                                                    <a className="text-xs hover:opacity-70" href={project.web}>Demo</a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -386,75 +385,52 @@ import project3 from '../assets/project3.png';
                                         </div>
                                     )}
                                     {activeTab === 'timeline' && (
-  <div className="space-y-6 mb-12 px-2 sm:px-0">
-    {/* Header */}
-    <div className="text-center">
-      <h3 className="text-sm sm:text-md md:text-xl tracking-tighter font-medium bg-linear-to-r from-gray-800 to-gray-600 dark:from-gray-100 dark:to-gray-300 bg-clip-text text-transparent mb-2">
-        MY JOURNEY
-      </h3>
-      <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
-        A timeline of milestones and achievements
-      </p>
-    </div>
+                                        <div className="space-y-6 mb-12 px-2 sm:px-0">
+                                            <div className="space-y-6">
+                                                {timelineData.map((item, index) => {
+                                                    const Icon = item.icon;
+                                                    return (
+                                                        <div key={item.id}
+                                                            className="relative pl-14 sm:pl-20 group"
+                                                            style={{
+                                                                animation: `fadeInUp 0.6s ease-out ${index * 0.2}s both`,
+                                                            }}
+                                                        >
+                                                        <div
+                                                            className='absolute left-0 flex items-center justify-center '
+                                                        >
+                                                            <Icon className="w-4 h-4" />
+                                                        </div>
 
-    {/* Timeline */}
-    <div className="relative">
-      {/* Vertical line */}
-      <div className="absolute left-5 sm:left-8 top-0 bottom-0 w-0.5 bg-linear-to-b from-blue-500 via-purple-500 to-emerald-500"></div>
+                                                        {/* Card */}
+                                                        <div className="bg-white dark:bg-gray-800 rounded-md p-4 sm:p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 dark:border-gray-700">
+                                                            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-2">
+                                                            <h4 className="text-sm sm:text-lg font-bold text-gray-800 dark:text-gray-100">
+                                                                {item.title}
+                                                            </h4>
 
-      <div className="space-y-6">
-        {timelineData.map((item, index) => {
-          const Icon = item.icon;
-          return (
-            <div
-              key={item.id}
-              className="relative pl-14 sm:pl-20 group"
-              style={{
-                animation: `fadeInUp 0.6s ease-out ${index * 0.2}s both`,
-              }}
-            >
-              {/* Icon */}
-              <div
-                className={`absolute left-0 flex items-center justify-center 
-                w-10 h-10 sm:w-16 sm:h-16 
-                rounded-full bg-linear-to-br ${item.color} 
-                shadow-lg transform group-hover:scale-110 transition-transform duration-300`}
-              >
-                <Icon className="w-5 h-5 sm:w-8 sm:h-8 text-white" />
-              </div>
+                                                            <span
+                                                                className={`inline-flex items-center px-2 sm:px-3 py-1 
+                                                                rounded-full text-[10px] sm:text-xs font-semibold 
+                                                                bg-linear-to-r ${item.color} text-white w-fit`}
+                                                            >
+                                                                {item.year}
+                                                            </span>
+                                                            </div>
 
-              {/* Card */}
-              <div className="bg-white dark:bg-gray-800 rounded-md p-4 sm:p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 dark:border-gray-700">
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-2">
-                  <h4 className="text-sm sm:text-lg font-bold text-gray-800 dark:text-gray-100">
-                    {item.title}
-                  </h4>
+                                                            <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+                                                            {item.description}
+                                                            </p>
+                                                        </div>
 
-                  <span
-                    className={`inline-flex items-center px-2 sm:px-3 py-1 
-                    rounded-full text-[10px] sm:text-xs font-semibold 
-                    bg-linear-to-r ${item.color} text-white w-fit`}
-                  >
-                    {item.year}
-                  </span>
-                </div>
-
-                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
-                  {item.description}
-                </p>
-              </div>
-
-              {/* Dot */}
-              <div className="absolute left-[18px] sm:left-7 top-4 sm:top-6 w-2 h-2 bg-white dark:bg-gray-800 rounded-full border-2 border-gray-400 dark:border-gray-500"></div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  </div>
-)}
-
-
+                                                        {/* Dot */}
+                                                        <div className="absolute left-[18px] sm:left-7 top-4 sm:top-6 w-2 h-2 bg-white dark:bg-gray-800 rounded-full border-2 border-gray-400 dark:border-gray-500"></div>
+                                                        </div>
+                                                    );
+                                                })}
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         </div>
