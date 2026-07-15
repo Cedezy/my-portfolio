@@ -103,7 +103,7 @@ const monogram = (name) =>
 
 const ProjectCard = ({ project, delay, large }) => (
     <Reveal delay={delay} className={`h-full ${large ? "lg:col-span-2" : ""}`}>
-        <div className="group relative flex h-full flex-col rounded-2xl border border-[#E5E4E1] px-7 py-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#0A0A0A]/25 hover:shadow-[0_14px_36px_-18px_rgba(10,10,10,0.28)]">
+        <div className="group relative flex h-full flex-col rounded-2xl border border-[#E5E4E1] p-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#0A0A0A]/25 hover:shadow-[0_14px_36px_-18px_rgba(10,10,10,0.28)]">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-0.5 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 bg-[#3452FF] rounded-t-2xl" />
 
             <div className="flex items-start justify-between">
@@ -131,7 +131,7 @@ const ProjectCard = ({ project, delay, large }) => (
                 />
             </h3>
 
-            <p className="mt-3 text-[13.5px] leading-relaxed text-[#6B6B6B] flex-1">
+            <p className="mt-3 text-xs md:text-sm leading-relaxed text-[#6B6B6B] flex-1">
                 {project.description}
             </p>
 

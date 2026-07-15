@@ -89,7 +89,7 @@ const Experience = () => (
                 <Reveal key={item.title} delay={i * 0.05}>
                     <div className="flex justify-between gap-8 py-6">
                         <div className="flex gap-6">
-                            <span className="w-28 shrink-0 text-[13px] text-[#8a8a8a]">
+                            <span className="w-28 shrink-0 text-[11px] text-[#8a8a8a]">
                                 {item.year}
                             </span>
                             <div>
@@ -97,11 +97,11 @@ const Experience = () => (
                                     {item.title}
                                 </h3>
 
-                                <p className="text-[13px] text-[#8a8a8a] mt-1">
+                                <p className="text-xs text-[#8a8a8a] mt-1">
                                     {item.org}
                                 </p>
 
-                                <p className="mt-3 max-w-xl text-[13px] leading-6 text-[#666]">
+                                <p className="mt-3 max-w-xl text-xs leading-6 text-[#666]">
                                     {item.description}
                                 </p>
                             </div>

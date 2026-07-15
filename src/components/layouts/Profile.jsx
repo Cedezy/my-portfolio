@@ -50,7 +50,7 @@ const Profile = () => (
                 <p className="mt-2 text-xs md:text-sm leading-relaxed text-[#4a4a4a] max-w-md">
                     I'm an aspiring full-stack developer. I build modern web applications and enjoy bringing ideas to life through code.
                 </p>
-                <p className="mt-4 ttext-xs md:text-sm leading-relaxed text-[#4a4a4a] max-w-md">
+                <p className="mt-4 text-xs md:text-sm leading-relaxed text-[#4a4a4a] max-w-md">
                     Currently studying Information Technology while continuously learning and building real-world projects.
                 </p>
 

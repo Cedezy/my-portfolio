@@ -50,7 +50,7 @@ const Portfolio = () => {
             />
 
              <main className="relative z-10">
-                <div className="max-w-3xl mx-auto px-6 sm:px-10 pt-28 lg:pt-20 pb-10">
+                <div className="max-w-3xl mx-auto px-4 sm:px-10 pt-28 lg:pt-20 pb-10">
                     <Profile />
                     <StatsRow />
                     <TechStack />
