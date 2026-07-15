@@ -1,24 +1,36 @@
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Menu,
-  X,
-  Github,
-  Linkedin,
-  Instagram,
-  Mail,
-  ArrowUpRight,
-  ArrowRight,
-  Sun,
-  Moon,
-  Monitor,
-  Volume2,
-  VolumeX,
-  MessageSquare,
-  Quote,
-  BadgeCheck,
-  Apple,
-  PlayCircle,
+    Menu,
+    X,
+    ArrowUpRight,
+    ArrowRight,
+    Sun,
+    Moon,
+    Monitor,
+    Volume2,
+    VolumeX,
+    MessageSquare,
+    Quote,
+    BadgeCheck,
+    Apple,
+    PlayCircle,
 } from "lucide-react";
+import {
+  SiGithub,
+  SiInstagram,
+  SiGmail,
+} from "react-icons/si";
+import {
+  Link,
+  Link2,
+  ExternalLink,
+  Globe,
+  Share2,
+  Cable,
+} from "lucide-react";
+
+import { FaLinkedin } from "react-icons/fa";
+
 import profile from '../../assets/profile.jpg'
 
 const Reveal = ({ children, delay = 0, y = 18, className = "" }) => (
@@ -47,47 +59,53 @@ const Profile = () => (
 
         <Reveal delay={0.1}>
             <h1 className="text-xl sm:text-3xl text-[#0A0A0A] tracking-tight">ACALAL, ABCEDE S.</h1>
-                <p className="mt-2 text-xs md:text-sm leading-relaxed text-[#4a4a4a] max-w-md">
-                    I'm an aspiring full-stack developer. I build modern web applications and enjoy bringing ideas to life through code.
-                </p>
-                <p className="mt-4 text-xs md:text-sm leading-relaxed text-[#4a4a4a] max-w-md">
-                    Currently studying Information Technology while continuously learning and building real-world projects.
-                </p>
+            <p className="mt-2 text-xs md:text-sm leading-relaxed text-[#4a4a4a] max-w-md">
+                I'm an aspiring full-stack developer. I build modern web applications and enjoy bringing ideas to life through code.
+            </p>
+            <p className="mt-4 text-xs md:text-sm leading-relaxed text-[#4a4a4a] max-w-md">
+                Currently studying Information Technology while continuously learning and building real-world projects.
+            </p>
 
-            <div className="mt-6 flex items-center gap-3">
-                {[
-                    {
-                        href: "https://github.com/yourusername",
-                        icon: Github,
-                        label: "GitHub",
-                    },
-                    {
-                        href: "https://linkedin.com/in/yourusername",
-                        icon: Linkedin,
-                        label: "LinkedIn",
-                    },
-                    {
-                        href: "https://instagram.com/yourusername",
-                        icon: Instagram,
-                        label: "Instagram",
-                    },
-                    {
-                        href: "mailto:elyserahhub@gmail.com",
-                        icon: Mail,
-                        label: "Email",
-                    },
-                ].map(({ href, icon: Icon, label }) => (
-                    <a
-                    key={label}
-                    href={href}
-                    target={href.startsWith("http") ? "_blank" : undefined}
-                    rel="noreferrer"
-                    aria-label={label}
-                    className="group flex h-8 w-8 items-center justify-center rounded-full border border-[#E7E7E7] bg-white text-[#6B6B6B] transition-all duration-300 hover:-translate-y-1 hover:border-black hover:bg-black hover:text-white hover:shadow-lg"
-                    >
-                    <Icon size={14} className="transition-transform duration-300 group-hover:scale-110" />
-                    </a>
-                ))}
+            <div className="mt-4 flex flex-col gap-2">
+                <span className="text-[10px] flex items-center gap-2">
+                    <Link size={12} />
+                    CONNECT
+                </span>
+                 <div className="flex items-center gap-3">
+                    {[
+                        {
+                            href: "https://github.com/yourusername",
+                            icon: SiGithub,
+                            label: "GitHub",
+                        },
+                        {
+                            href: "https://linkedin.com/in/yourusername",
+                            icon: FaLinkedin,
+                            label: "LinkedIn",
+                        },
+                        {
+                            href: "https://instagram.com/yourusername",
+                            icon: SiInstagram,
+                            label: "Instagram",
+                        },
+                        {
+                            href: "mailto:elyserahhub@gmail.com",
+                            icon: SiGmail,
+                            label: "Email",
+                        },
+                    ].map(({ href, icon: Icon, label }) => (
+                        <a
+                            key={label}
+                            href={href}
+                            target={href.startsWith("http") ? "_blank" : undefined}
+                            rel="noreferrer"
+                            aria-label={label}
+                            className="group flex h-8 w-8 items-center justify-center rounded-full border border-[#E7E7E7] text-[#6B6B6B] transition-all duration-300 hover:-translate-y-1 "
+                        >
+                        <Icon size={14} className="transition-transform duration-300 group-hover:scale-110" />
+                        </a>
+                    ))}
+                </div>
             </div>
         </Reveal>
     </div>
