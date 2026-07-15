@@ -54,11 +54,11 @@ const Activity = () => {
                                 GitHub
                             </p>
 
-                            <h3 className="mt-2 text-2xl font-medium text-[#0A0A0A]">
+                            <h3 className="mt-2 text-lg md:text-2xl font-medium text-[#0A0A0A]">
                                 Open Source Activity
                             </h3>
 
-                            <p className="mt-2 text-[14px] text-[#666] max-w-lg leading-7">
+                            <p className="mt-2 text-[11px] md:text-xs text-[#666] max-w-lg leading-5">
                                 I use GitHub to manage personal projects, freelance work,
                                 experiments, and continuous learning. Every contribution reflects
                                 my growth as a developer.
