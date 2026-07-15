@@ -29,9 +29,9 @@ const NAV_TOP = [
 const NAV_SECTIONS = [
     { label: "About", href: "#about" },
     { label: "Projects", href: "#projects" },
-    { label: "Skills", href: "#skills" },
+    { label: "Stack", href: "#stack" },
     { label: "Experience", href: "#experience" },
-    { label: "Contact", href: "#contact" },
+    { label: "Activity", href: "#activity" },
 ];
 
 const scrollToId = (href) => {
@@ -42,40 +42,85 @@ const scrollToId = (href) => {
 const Sidebar = ({ mobileOpen, setMobileOpen }) => {
 
     const content = (
-       <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden lg:flex items-center gap-2 rounded-full border border-[#E5E4E1] bg-[#FAFAFA]/80 backdrop-blur-xl px-2 py-2 shadow-sm">
+        <motion.nav
+            initial={{ y: -25, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="fixed top-5 left-1/2 -translate-x-1/2 z-50 hidden lg:flex items-center gap-2
+            rounded-full
+            border border-white/60
+            bg-white/75
+            backdrop-blur-2xl
+            px-3 py-2
+            shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
+        >
+            {/* Logo */}
             <a
-                href="#top"
-                onClick={(e) => {
+            href="#top"
+            onClick={(e) => {
                 e.preventDefault();
                 scrollToId("#top");
-                }}
-                className="px-4 py-2 rounded-full text-xs font-medium text-[#0A0A0A] hover:bg-black hover:text-white transition-all" style={{ fontFamily: "Poppins, sans-serif" }}
+            }}
+            className="group flex items-center gap-3 rounded-full px-2 py-1"
             >
-                HOME
+            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#3452FF] text-white font-semibold shadow-lg transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+                Z
+            </div>
+
+            <div className="flex flex-col leading-none">
+                <span
+                className="text-[13px] font-semibold tracking-wide"
+                style={{ fontFamily: "Poppins, sans-serif" }}
+                >
+                Zydece
+                </span>
+
+                <span
+                className="text-[10px] text-[#777]"
+                style={{ fontFamily: "Poppins, sans-serif" }}
+                >
+                Portfolio
+                </span>
+            </div>
             </a>
+
+            <div className="mx-2 h-6 w-px bg-[#E5E4E1]" />
 
             {NAV_SECTIONS.map((item) => (
-                <a
-                    key={item.href}
-                    href={item.href}
-                    onClick={(e) => {
-                        e.preventDefault();
-                        scrollToId(item.href);
-                    }}
-                        className="px-4 py-2 rounded-full text-xs uppercase font-medium tracking-wider text-[#666] hover:bg-black hover:text-white transition-all duration-300 cursor-pointer"
-                        style={{ fontFamily: "Poppins, sans-serif" }}
-                    >
-                    {item.label}    
-                </a>
+            <a
+                key={item.href}
+                href={item.href}
+                onClick={(e) => {
+                e.preventDefault();
+                scrollToId(item.href);
+                }}
+                className="group relative overflow-hidden rounded-full px-4 py-2"
+            >
+                <span
+                className="absolute inset-0 scale-0 rounded-full bg-black transition-transform duration-300 group-hover:scale-100"
+                />
+
+                <span
+                className="relative z-10 text-xs font-medium uppercase tracking-wider text-[#666] transition-colors duration-300 group-hover:text-white"
+                style={{ fontFamily: "Poppins, sans-serif" }}
+                >
+                {item.label}
+                </span>
+            </a>
             ))}
 
-            <a
-                href="#contact"
-                className="ml-2 rounded-full bg-black px-5 py-2 text-sm font-medium text-white hover:bg-neutral-800 transition"
+            <div className="mx-1 h-6 w-px bg-[#E5E4E1]" />
+
+            <div
+            className="flex items-center gap-2 rounded-full bg-black px-4 py-2"
+            style={{ fontFamily: "Poppins, sans-serif" }}
             >
-                Contact
-            </a>
-        </nav>
+            <span className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
+            <span className="text-[11px] font-medium text-white">
+                Available
+            </span>
+            </div>
+        </motion.nav>
     );
 
     return (
@@ -84,39 +129,66 @@ const Sidebar = ({ mobileOpen, setMobileOpen }) => {
                 {content}
             </aside>
 
-            <div className="lg:hidden fixed top-4 left-4 right-4 z-50">
-                <div className="flex items-center justify-between rounded-full border border-[#E5E4E1] bg-[#FAFAFA]/80 backdrop-blur-xl px-5 py-3 shadow-sm">
-                    <span className="font-medium">Abcede Acalal</span>
+           <div className="lg:hidden fixed top-4 left-4 right-4 z-50">
+                <div className="flex items-center justify-between rounded-full border border-white/60 bg-white/80 backdrop-blur-2xl px-5 py-3 shadow-lg">
 
-                    <button onClick={() => setMobileOpen(!mobileOpen)}>
-                    {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+                    <div className="flex items-center gap-3">
+                    <div className="h-9 w-9 rounded-full bg-[#3452FF] text-white flex items-center justify-center font-semibold">
+                        Z
+                    </div>
+
+                    <div>
+                        <p className="text-sm font-semibold">Zydece</p>
+                        <p className="text-[11px] text-[#777]">Portfolio</p>
+                    </div>
+                    </div>
+
+                    <button
+                    onClick={() => setMobileOpen(!mobileOpen)}
+                    className="rounded-full bg-[#F5F5F5] p-2 transition hover:bg-black hover:text-white"
+                    >
+                    {mobileOpen ? <X size={18} /> : <Menu size={18} />}
                     </button>
+
                 </div>
             </div>
 
             <AnimatePresence>
                 {mobileOpen && (
                     <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className="lg:hidden fixed top-20 left-4 right-4 z-40 rounded-3xl border border-[#E5E4E1] bg-[#FAFAFA]/95 backdrop-blur-xl p-6 shadow-xl"
+                        initial={{ opacity: 0, y: -15, scale: 0.96 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -15, scale: 0.96 }}
+                        transition={{ duration: 0.25 }}
+                        className="lg:hidden fixed top-24 left-4 right-4 z-40 overflow-hidden rounded-3xl border border-[#E5E4E1] bg-white/95 backdrop-blur-2xl shadow-2xl"
                     >
-                    <div className="flex flex-col gap-2">
+                    <div className="p-3">
                         {NAV_SECTIONS.map((item) => (
-                        <a
-                            key={item.href}
-                            href={item.href}
-                            onClick={(e) => {
-                            e.preventDefault();
-                            scrollToId(item.href);
-                            setMobileOpen(false);
-                            }}
-                            className="rounded-xl px-4 py-3 hover:bg-neutral-100 transition"
-                        >
-                            {item.label}
-                        </a>
+                            <a
+                                key={item.href}
+                                href={item.href}
+                                onClick={(e) => {
+                                e.preventDefault();
+                                scrollToId(item.href);
+                                setMobileOpen(false);
+                                }}
+                                className="flex items-center justify-between rounded-2xl px-5 py-4 text-xs font-medium transition hover:bg-[#F5F5F5]"
+                            >
+                                {item.label}
+
+                                <ArrowRight
+                                size={16}
+                                className="text-[#999]"
+                                />
+                            </a>
                         ))}
+                    </div>
+
+                    <div className="border-t border-[#E5E4E1] px-5 py-4">
+                        <div className="flex items-center gap-2 text-xs">
+                        <span className="h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
+                            Available for freelance
+                        </div>
                     </div>
                     </motion.div>
                 )}

@@ -103,22 +103,22 @@ const monogram = (name) =>
 
 const ProjectCard = ({ project, delay, large }) => (
     <Reveal delay={delay} className={`h-full ${large ? "lg:col-span-2" : ""}`}>
-        <div className="group relative flex h-full flex-col rounded-2xl border border-[#E5E4E1] p-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#0A0A0A]/25 hover:shadow-[0_14px_36px_-18px_rgba(10,10,10,0.28)]">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-0.5 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 bg-[#3452FF] rounded-t-2xl" />
+        <div className="group relative flex h-full flex-col rounded-2xl border border-[#E5E4E1] p-4 transition-all duration-300 hover:-translate-y-1 ">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-0.5 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 rounded-t-2xl" />
 
             <div className="flex items-start justify-between">
                 <div className="flex items-center gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#E5E4E1] bg-[#FAFAFA] text-[12px] font-medium text-[#4a4a4a] group-hover:border-[#3452FF]/30 group-hover:text-[#3452FF] transition-colors">
-                    {monogram(project.name)}
-                </span>
-                <div>
-                    <p className="text-[11px] uppercase tracking-[0.06em] text-[#8a8a8a]">
-                    {project.category}
-                    </p>
-                    {project.featured && (
-                    <p className="text-[10px] tracking-[0.06em] text-[#3452FF]">Featured build</p>
-                    )}
-                </div>
+                    <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#E5E4E1] bg-[#FAFAFA] text-[12px] font-medium text-[#4a4a4a]">
+                        {monogram(project.name)}
+                    </span>
+                    <div>
+                        <p className="text-[11px] uppercase tracking-[0.06em] text-[#8a8a8a]">
+                            {project.category}
+                        </p>
+                        {project.featured && (
+                            <p className="text-[10px] tracking-[0.06em] text-[#3452FF]">Featured build</p>
+                        )}
+                    </div>
                 </div>
                 <span className="text-[11px] text-[#D8D7D3] tabular-nums">{project.index}</span>
             </div>
