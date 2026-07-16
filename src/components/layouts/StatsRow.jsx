@@ -42,7 +42,7 @@ const Reveal = ({ children, delay = 0, y = 18, className = "" }) => (
 
 const StatsRow = () => (
     <Reveal delay={0.05}>
-        <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 border-y border-[#E5E4E1]">
+        <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 border-y border-[#E5E4E1]">
             {STATS.map((s, index) => (
                 <div
                     key={s.label}

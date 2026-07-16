@@ -66,30 +66,30 @@ const Profile = () => (
                 Currently studying Information Technology while continuously learning and building real-world projects.
             </p>
 
-            <div className="mt-4 flex flex-col gap-2">
+            <div className="mt-6 flex flex-col gap-2">
                 <span className="text-[10px] flex items-center gap-2">
                     <Link size={12} />
                     CONNECT
                 </span>
-                 <div className="flex items-center gap-3">
+                 <div className="flex items-center gap-2">
                     {[
                         {
-                            href: "https://github.com/yourusername",
+                            href: "https://github.com/Cedezy",
                             icon: SiGithub,
                             label: "GitHub",
                         },
                         {
-                            href: "https://linkedin.com/in/yourusername",
+                            href: "https://www.linkedin.com/in/abcede-sulani-acalal-2b335a332/",
                             icon: FaLinkedin,
                             label: "LinkedIn",
                         },
                         {
-                            href: "https://instagram.com/yourusername",
+                            href: "https://www.instagram.com/abcedesulani/",
                             icon: SiInstagram,
                             label: "Instagram",
                         },
                         {
-                            href: "mailto:elyserahhub@gmail.com",
+                            href: "mailto:abcedeacalal18@gmail.com",
                             icon: SiGmail,
                             label: "Email",
                         },
