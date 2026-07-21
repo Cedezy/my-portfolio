@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowUpRight, Github, ExternalLink, Lock } from "lucide-react";
-
+import plogo1 from '../../assets/plogo1.png'
 
 const Reveal = ({ children, delay = 0, y = 18, className = "" }) => (
     <motion.div
@@ -33,6 +33,7 @@ const SectionHeader = ({ index, label, action }) => (
 const PROJECTS = [
     {
         index: "01",
+        logo: plogo1,
         category: "Booking Platform",
         featured: true,
         name: "Elyserah Hub",
@@ -91,16 +92,6 @@ const ProjectLink = ({ href, icon: Icon, label, placeholderLabel }) => {
     );
 };
 
-
-const monogram = (name) =>
-    name
-        .split(" ")
-        .filter((w) => /^[A-Za-z]/.test(w))
-        .slice(0, 2)
-        .map((w) => w[0])
-        .join("")
-        .toUpperCase();
-
 const ProjectCard = ({ project, delay, large }) => (
     <Reveal delay={delay} className={`h-full ${large ? "lg:col-span-2" : ""}`}>
         <div className="group relative flex h-full flex-col rounded-2xl border border-[#E5E4E1] p-4 transition-all duration-300 hover:-translate-y-1 ">
@@ -108,8 +99,8 @@ const ProjectCard = ({ project, delay, large }) => (
 
             <div className="flex items-start justify-between">
                 <div className="flex items-center gap-3">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#E5E4E1] bg-[#FAFAFA] text-[12px] font-medium text-[#4a4a4a]">
-                        {monogram(project.name)}
+                    <span className="flex h-10 w-10 items-center justify-center border border-gray-300 rounded-md">
+                        <img src={project.logo} alt="" />
                     </span>
                     <div>
                         <p className="text-[11px] uppercase tracking-[0.06em] text-[#8a8a8a]">
@@ -125,9 +116,9 @@ const ProjectCard = ({ project, delay, large }) => (
 
             <h3 className="mt-5 text-[18px] text-[#0A0A0A] flex items-center gap-1.5">
                 {project.name}
-                <ArrowUpRight
-                size={14}
-                className="text-[#B7B6B1] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                    <ArrowUpRight
+                    size={14}
+                    className="text-[#B7B6B1] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
                 />
             </h3>
 
@@ -153,7 +144,7 @@ const ProjectCard = ({ project, delay, large }) => (
             </div>
 
             <div className="mt-6 flex items-center gap-3 pt-5 border-t border-[#E5E4E1]">
-                <ProjectLink href={project.github} icon={Github} label="Code" placeholderLabel="Repository not public yet" />
+                <ProjectLink href={project.github} icon={Github} label="Github" placeholderLabel="Repository not public yet" />
                 <ProjectLink href={project.demo} icon={ExternalLink} label="Live Demo" placeholderLabel="Demo coming soon" />
             </div>
         </div>

@@ -17,8 +17,7 @@ const DotField = () => (
         backgroundImage: "radial-gradient(#D8D7D3 1px, transparent 1px)",
         backgroundSize: "22px 22px",
         backgroundPosition: "10px 10px",
-        maskImage:
-            "radial-gradient(ellipse 90% 70% at 78% 20%, black 10%, transparent 65%), radial-gradient(ellipse 60% 50% at 95% 90%, black 0%, transparent 60%)",
+        maskImage:"radial-gradient(ellipse 90% 70% at 78% 20%, black 10%, transparent 65%), radial-gradient(ellipse 60% 50% at 95% 90%, black 0%, transparent 60%)",
         WebkitMaskImage:
             "radial-gradient(ellipse 90% 70% at 78% 20%, black 10%, transparent 65%), radial-gradient(ellipse 60% 50% at 95% 90%, black 0%, transparent 60%)",
         }}

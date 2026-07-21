@@ -37,7 +37,7 @@ const Activity = () => {
         <section id="activity" className="mt-16 mb-28">
             <Reveal>
                 <SectionHeader
-                index="07"
+                index="05"
                 label="activity"
                 action={{
                     label: "Cedezy",
