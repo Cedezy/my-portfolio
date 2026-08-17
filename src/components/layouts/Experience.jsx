@@ -57,8 +57,8 @@ const EXPERIENCE = [
         "Building full-stack web applications for capstone and client projects using React, Node.js, Express, and MongoDB.",
     },
     {
-        year: "Aug 2026 (Upcoming)",
-        title: "IT Intern (OJT)",
+        year: "Aug 2026",
+        title: "IT Support (OJT)",
         org: "Artifex Computer Center and General Merchandise",
         description:
         "Upcoming internship focused on computer troubleshooting, networking, technical support, and IT operations.",
