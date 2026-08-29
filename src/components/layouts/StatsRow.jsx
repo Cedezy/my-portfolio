@@ -42,12 +42,12 @@ const Reveal = ({ children, delay = 0, y = 18, className = "" }) => (
 
 const StatsRow = () => (
     <Reveal delay={0.05}>
-        <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 border-y border-[#E5E4E1]">
+        <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 border-y border-[#E5E4E1]">
             {STATS.map((s, index) => (
                 <div
                     key={s.label}
                     className={`
-                        px-6 py-6
+                        px-6 md:px-2 py-6 md:py-4
                         border-b border-[#E5E4E1]
                         sm:border-b-0
                         ${index % 2 === 0 ? "border-r border-[#E5E4E1] sm:border-r" : "sm:border-r"}
@@ -61,7 +61,7 @@ const StatsRow = () => (
                         <ArrowUpRight size={13} className="text-[#8a8a8a]" />
                     </div>
 
-                    <div className="mt-1 text-[11px] uppercase tracking-[0.08em] text-[#8a8a8a]">
+                    <div className=" text-[11px] uppercase tracking-[0.08em] text-[#8a8a8a]">
                         {s.label}
                     </div>
                 </div>

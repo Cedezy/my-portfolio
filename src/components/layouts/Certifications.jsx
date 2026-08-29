@@ -70,10 +70,10 @@ const SectionHeader = ({ index, label, action }) => (
 );
 
 const Certifications = () => (
-    <section id="certifications" className="mt-24">
-        <Reveal>
-        <SectionHeader index="04" label="certifications" action={{ label: "all certifications", href: "#" }} />
-        </Reveal>
+    <section id="certifications" className="mt-16">
+        <p className="mb-3 text-[11px] uppercase tracking-[0.08em] text-[#8a8a8a]">
+            Certifications
+        </p>
         <div className="grid sm:grid-cols-3 gap-4">
             {CERTIFICATIONS.map((c, i) => (
                 <Reveal key={c.title} delay={i * 0.06}>

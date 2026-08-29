@@ -198,9 +198,9 @@ const ProjectCard = ({ project, delay, large }) => {
 
 const Projects = () => (
     <section id="projects" className="mt-16">
-        <Reveal>
-            <SectionHeader index="02" label="projects" action={{ label: "all projects", href: "#" }} />
-        </Reveal>
+        <p className="mb-3 text-[11px] uppercase tracking-[0.08em] text-[#8a8a8a]">
+            Projects
+        </p>
 
         <div className="grid sm:grid-cols-2 gap-5">
             {PROJECTS.map((project, i) => (

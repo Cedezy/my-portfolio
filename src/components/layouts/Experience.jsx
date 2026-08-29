@@ -48,42 +48,44 @@ const SectionHeader = ({ index, label, action }) => (
     </div>
 );
 
+
 const EXPERIENCE = [
     {
         year: "2025 – Present",
         title: "Freelance MERN Stack Developer",
         org: "Self-Employed",
         description:
-        "Building full-stack web applications for capstone and client projects using React, Node.js, Express, and MongoDB.",
+            "Building full-stack web applications for capstone and client projects using React, Node.js, Express, and MongoDB. Developing practical solutions for real-world needs.",
     },
     {
         year: "Aug 2026",
         title: "IT Support (OJT)",
         org: "Artifex Computer Center and General Merchandise",
         description:
-        "Upcoming internship focused on computer troubleshooting, networking, technical support, and IT operations.",
+            "Gaining hands-on experience in computer troubleshooting, networking, technical support, and IT operations. Providing practical technical assistance.",
     },
     {
         year: "2022 – Present",
         title: "BS Information Technology",
         org: "Southern Mindanao Colleges",
         description:
-        "4th-year student specializing in web development, databases, networking, and software engineering.",
+            "4th-year student specializing in web development, databases, networking, and software engineering. Building skills through academic projects.",
     },
     {
         year: "2020 – 2022",
         title: "ICT Student",
         org: "Senior High School",
         description:
-        "Studied programming fundamentals, networking, computer hardware, and office productivity tools.",
+            "Studied programming fundamentals, networking, computer hardware, and office productivity tools. Developing foundational technical skills.",
     },
 ];
 
+
 const Experience = () => (
     <section id="experience" className="mt-16">
-        <Reveal>
-            <SectionHeader index="03" label="experience" action={{ label: "full history", href: "#" }} />
-        </Reveal>
+        <p className="mb-3 text-[11px] uppercase tracking-[0.08em] text-[#8a8a8a]">
+            Experience
+        </p>
         <div className="divide-y divide-[#E5E4E1] border-t border-b border-[#E5E4E1]">
             {EXPERIENCE.map((item, i) => (
                 <Reveal key={item.title} delay={i * 0.05}>
@@ -101,7 +103,7 @@ const Experience = () => (
                                     {item.org}
                                 </p>
 
-                                <p className="mt-3 max-w-xl text-xs leading-6 text-[#666]">
+                                <p className="mt-3 text-xs leading-6 text-[#666]">
                                     {item.description}
                                 </p>
                             </div>

@@ -15,7 +15,10 @@ import {
   SiPostman,
   SiDocker,
   SiVercel,
-  SiRender
+  SiRender,
+  SiNextdotjs,
+    SiFirebase,
+    SiMysql,
 } from "react-icons/si";
 
 const Reveal = ({ children, delay = 0, y = 18, className = "" }) => (
@@ -30,23 +33,6 @@ const Reveal = ({ children, delay = 0, y = 18, className = "" }) => (
   </motion.div>
 );
 
-const SectionHeader = ({ index, label, action }) => (
-    <div className="flex items-baseline justify-between mb-8">
-        <span className="text-[13px] text-[#8a8a8a]">
-            {index} — {label}
-        </span>
-
-        {action && (
-            <a
-                href={action.href}
-                className="inline-flex items-center gap-1 text-[12px] text-[#8a8a8a] hover:text-[#0A0A0A] transition-colors"
-            >
-                {action.label} <ArrowRight size={11} />
-            </a>
-        )}
-    </div>
-);
-
 const STACK_GROUPS = [
     {
         group: "Interface & Server",
@@ -58,6 +44,9 @@ const STACK_GROUPS = [
             { name: "Node.js", icon: SiNodedotjs, tint: "#3C873A", primary: true },
             { name: "Express", icon: SiExpress, tint: "#000000" },
             { name: "MongoDB", icon: SiMongodb, tint: "#47A248" },
+            { name: "Next.js", icon: SiNextdotjs, tint: "#000000" },
+            { name: "Firebase", icon: SiFirebase, tint: "#FFCA28" },
+            { name: "MySQL", icon: SiMysql, tint: "#4479A1" },
         ],
     },
 
@@ -69,7 +58,7 @@ const STACK_GROUPS = [
             { name: "Docker", icon: SiDocker, tint: "#2496ED" },
             { name: "Vercel", icon: SiVercel, tint: "#000000" },
             { name: "Render", icon: SiRender, tint: "#46E3B7" },
-            { name: "Figma", icon: SiFigma, tint: "#F24E1E" },
+           
             { name: "Postman", icon: SiPostman, tint: "#FF6C37" },
         ],
     },
@@ -107,10 +96,8 @@ const StackCard = ({ name, icon: Icon, tint, primary, delay }) => (
 );
 
 const TechStack = () => (
-    <section id="stack" className="mt-16">
-        <Reveal>
-            <SectionHeader index="01" label="tech stack" action={{ label: "view all", href: "#" }} />
-        </Reveal>
+    <section id="stack" className="mt-6" >
+       
 
         <div className="space-y-8">
             {STACK_GROUPS.map((group, gi) => (
@@ -121,7 +108,7 @@ const TechStack = () => (
                         </p>
                     </Reveal>
 
-                    <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                    <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
                         {group.items.map((item, i) => (
                             <StackCard
                             key={item.name}

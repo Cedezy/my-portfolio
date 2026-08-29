@@ -31,7 +31,8 @@ import {
 
 import { FaLinkedin } from "react-icons/fa";
 
-import profile from '../../assets/profile.jpg'
+import profile from '../../assets/profile3.png'
+import StatsRow from "./StatsRow";
 
 const Reveal = ({ children, delay = 0, y = 18, className = "" }) => (
     <motion.div
@@ -48,25 +49,29 @@ const Reveal = ({ children, delay = 0, y = 18, className = "" }) => (
 const Profile = () => (
     <div id="top" className="grid sm:grid-cols-[220px_1fr] gap-8 sm:gap-12 items-start md:mt-6">
         <Reveal>
-            <div className="w-full max-w-[220px] aspect-square rounded-2xl overflow-hidden border border-[#E5E4E1]">
+            <div className="w-full max-w-[250px] h-[380px]">
                 <img
                     src={profile}
-                    alt="Portrait of Mara Voss"
-                    className="w-full h-full object-cover grayscale contrast-100"
+                    alt="Portrait of Zydece"
+                    className="w-full h-full object-contain"
                 />
             </div>
         </Reveal>
 
         <Reveal delay={0.1}>
-            <h1 className="text-xl sm:text-3xl text-[#0A0A0A] tracking-tight">ACALAL, ABCEDE S.</h1>
-            <p className="mt-2 text-xs md:text-sm leading-relaxed text-[#4a4a4a] max-w-md">
-                I'm an aspiring full-stack developer. I build modern web applications and enjoy bringing ideas to life through code.
-            </p>
-            <p className="mt-4 text-xs md:text-sm leading-relaxed text-[#4a4a4a] max-w-md">
-                Currently studying Information Technology while continuously learning and building real-world projects.
-            </p>
+            <div className="md:mt-6">
+                <h1 className="text-xl sm:text-3xl text-[#0A0A0A] tracking-tight">ACALAL, ABCEDE S.</h1>
+                <p className="mt-2 text-xs md:text-sm leading-relaxed text-[#4a4a4a] max-w-lg">
+                    I'm an aspiring full-stack developer. I build modern web applications and enjoy bringing ideas to life through code.
+                </p>
+                <p className="mt-4 text-xs md:text-sm leading-relaxed text-[#4a4a4a] max-w-lg">
+                    Currently studying Information Technology while continuously learning and building real-world projects.
+                </p>
+            </div>
+            
+            <StatsRow/>
 
-            <div className="mt-6 flex flex-col gap-2">
+            <div className="mt-4 flex flex-col">
                 <span className="text-[10px] flex items-center gap-2">
                     <Link size={12} />
                     CONNECT

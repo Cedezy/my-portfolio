@@ -34,17 +34,7 @@ const SectionHeader = ({ index, label, action }) => (
 
 const Activity = () => {
     return (
-        <section id="activity" className="mt-16 mb-28">
-            <Reveal>
-                <SectionHeader
-                index="05"
-                label="activity"
-                action={{
-                    label: "Cedezy",
-                    href: "https://github.com/Cedezy",
-                }}
-                />
-            </Reveal>
+        <section id="activity" className="mt-16 mb-16">
 
             <Reveal delay={0.08}>
                 <div className=" ">
