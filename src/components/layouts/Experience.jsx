@@ -59,17 +59,17 @@ const EXPERIENCE = [
     },
     {
         year: "Aug 2026",
-        title: "IT Support (OJT)",
+        title: "Computer Technician Trainee (OJT)",
         org: "Artifex Computer Center and General Merchandise",
         description:
-            "Gaining hands-on experience in computer troubleshooting, networking, technical support, and IT operations. Providing practical technical assistance.",
+            "Gaining hands-on experience in desktop and laptop troubleshooting, hardware assembly, computer reformatting, software installation, printer setup, hardware repairs, computer maintenance, and hardware upgrades.",
     },
     {
-        year: "2022 – Present",
+        year: "2022 – 2026",
         title: "BS Information Technology",
         org: "Southern Mindanao Colleges",
         description:
-            "4th-year student specializing in web development, databases, networking, and software engineering. Building skills through academic projects.",
+            "Aspiring IT professional with skills in web development, database management, and software engineering, complemented by hands-on experience in computer troubleshooting and hardware maintenance.",
     },
     {
         year: "2020 – 2022",
